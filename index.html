@@ -10,7 +10,7 @@
 
 <body>
 
-  <!-- Header -->
+
   <header id="top">
     <h1>MOTO DETAIL PRO</h1>
     <nav>
@@ -21,32 +21,67 @@
     </nav>
   </header>
 
-  <!-- Hero / Presentación -->
+  
   <main>
- <section class="hero">
-    <div class="hero-text">
+
+    <section class="hero">
+      <div class="hero-text">
         <h2>
-            CUIDAMOS TU MOTO COMO SI FUERA NUESTRA, 
-            DEJÁNDOLA IMPECABLE EN CADA VISITA
-            <br>
-            <span class="highlight">MOTO DETAIL PRO</span>
+          CUIDAMOS TU MOTO COMO SI FUERA NUESTRA,
+          DEJÁNDOLA IMPECABLE EN CADA VISITA
+          <br>
+          <span class="highlight">MOTO DETAIL PRO</span>
         </h2>
 
-        <a href="****" class="btn">Compra la membresía</a>
-    </div>
+        <button class="btn btn-open">Registrate para tener más beneficios con nosotros</button>
+      </div>
 
-    <figure>
+      <figure>
         <img src="img/img1.png" alt="MOTO DETAIL PRO" class="hero-img">
-    </figure>
-</section>
+      </figure>0
+    </section>
+
+  
+    <section class="modal hidden" role="dialog" aria-hidden="true">
+      <h1 class="titulo">Registro de Usuario</h1>
+
+      <div class="contenedor">
+        <button class="btn-close">X</button>
+
+        <h2>Registro de Usuario</h2>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" class="campo">
+        <p class="error" id="errorNombre"></p>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="campo">
+        <p class="error" id="errorEmail"></p>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" class="campo">
+        <p class="error" id="errorEdad"></p>
+
+        <div class="botones">
+          <button id="btnGuardar">Guardar</button>
+          <button id="btnVerDatos">Ver Datos</button>
+          <button id="btnLimpiar">Limpiar Formulario</button>
+          <button id="btnBorrarDatos">Borrar Datos</button>
+        </div>
+
+        <div id="resultado" class="resultado"></div>
+      </div>
+    </section>
+
+    <div class="overlay hidden"></div>
 
   </main>
 
-
-  <!-- Footer -->
   <footer>
     <p>&copy; MOTO DETAIL PRO.</p>
   </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>

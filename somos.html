@@ -11,7 +11,6 @@
 
 <body>
 
-  <!-- Header -->
   <header id="top">
     <h1>MOTO DETAIL PRO</h1>
     <nav>
@@ -23,7 +22,6 @@
   </header>
 
 
-  <!-- Hero / Presentación -->
   <main>
     <section class="hero2">
     <br>
@@ -49,16 +47,51 @@
         <br>
         <br>
 
-        <a href="****" class="btn">Ubicados en</a>
+ 
+<button class="btn-ubicacion btn">Ubicados en</button>
+
+
+
+<section class="modal modal-ubicacion hidden">
+        <h1 class="titulo">Nuestra Ubicación</h1>
+
+        <div class="contenedor">
+            <button class="btn-close btn-close-ubicacion">X</button>
+
+            <h2>Estamos ubicados en:</h2>
+
+            <p class="texto-ubicacion">
+                 <strong>Funza - Cundinamarca - Colombia</strong><br>
+                Barrio <strong>Villa Paul</strong><br>
+                
+            </p>
+
+            <div class="mapa">
+                
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.7322000972114!2d-74.2154666!3d4.7129462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8938c36e6711%3A0xb0ff1bf43ca58f38!2sCl.%2010%20%2315-30%2C%20Funza%2C%20Cundinamarca!5e0!3m2!1ses-419!2sco!4v1732823159000!5m2!1ses-419!2sco"
+                    width="100%"
+                    height="250"
+                    style="border:0; border-radius:10px;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+</section>
+
+<div class="overlay overlay-ubicacion hidden"></div>
 
       </div>
   </main>
 
 
-  <!-- Footer -->
+
   <footer>
     <p>&copy; MOTO DETAIL PRO.</p>
   </footer>
+  <script src="script.js"></script>
+
 
 </body>
 
