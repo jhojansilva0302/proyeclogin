@@ -1,16 +1,30 @@
-// Verificar sesión activa
-const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+// ======== PROTECCIÓN DE SESIÓN Y CARGA DE USUARIO ========
+window.addEventListener('DOMContentLoaded', () => {
+    const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+    const usuarioAutenticado = localStorage.getItem("usuarioAutenticado");
 
-if (!usuarioActivo) {
-    // Si no hay sesión, redirigir al inicio
-    window.location.href = "index.html";
-}
+    // Si no está autenticado, redirige
+    if (!usuarioActivo || usuarioAutenticado !== "true") {
+        window.location.href = "index.html";
+        return;
+    }
 
-document.getElementById("userNombre").textContent =
-    "Hola " + usuarioActivo.nombre + ", gracias por ingresar.";
+    // Mostrar nombre del usuario
+    const userNombreElem = document.getElementById("userNombre");
+    if (userNombreElem) {
+        userNombreElem.textContent = "Hola " + usuarioActivo.nombre + ", gracias por ingresar.";
+    }
 
-// Botón cerrar sesión
-document.getElementById("logoutBtn").addEventListener("click", () => {
-    localStorage.removeItem("usuarioActivo");
-    window.location.href = "index.html";
+    // Botón cerrar sesión
+    const btnLogout = document.getElementById("btnLogout");
+    if (btnLogout) {
+        btnLogout.addEventListener("click", () => {
+            // Elimina datos de sesión
+            localStorage.removeItem("usuarioActivo");
+            localStorage.removeItem("usuarioAutenticado");
+
+            // Redirige al login
+            window.location.href = "index.html";
+        });
+    }
 });
