@@ -453,6 +453,90 @@ label {
     box-shadow: 0 0 15px #ff000055;
 }
 
+/* ====== MODAL AUTH PROFESIONAL ======= */
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 18px;
+}
+
+.tab {
+    flex: 1;
+    margin: 0 4px;
+    padding: 10px;
+    background: #1a0000;
+    border: 1px solid #550000;
+    color: #ffbdbd;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.25s;
+    text-align: center;
+}
+
+.tab.active {
+    background: #ff1a1a;
+    color: #fff;
+    box-shadow: 0 0 12px #ff0000;
+}
+
+.tab:hover {
+    background: #b30000;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.modal-title {
+    text-align: center;
+    color: #ff4d4d;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.btn-auth {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #b30000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px #ff000066;
+    transition: 0.25s;
+}
+
+.btn-auth:hover {
+    background: #ff1a1a;
+    box-shadow: 0 0 16px #ff0000;
+}
+
+.recover-info {
+    margin-top: 10px;
+    color: #ff9f9f;
+    font-size: 13px;
+    text-align: center;
+}
+
+.card h1 {
+    color: #FF1744;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.card p {
+    font-size: 18px;
+    color: #ddd;
+    margin-top: 10px;
+}
 
 
 

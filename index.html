@@ -33,7 +33,8 @@
           <span class="highlight">MOTO DETAIL PRO</span>
         </h2>
 
-        <button class="btn btn-open">Registrate para tener más beneficios con nosotros</button>
+        <button class="btn btn-open">Ingresar a mi cuenta</button>
+
       </div>
 
       <figure>
@@ -42,36 +43,71 @@
     </section>
 
   
-    <section class="modal hidden" role="dialog" aria-hidden="true">
-      <h1 class="titulo">Registro de Usuario</h1>
+    <section class="modal hidden" id="authModal" role="dialog" aria-hidden="true">
 
-      <div class="contenedor">
-        <button class="btn-close">X</button>
+  <button class="btn-close" id="closeAuth">X</button>
 
-        <h2>Registro de Usuario</h2>
+  <!-- TABS -->
+  <div class="tabs">
+      <button class="tab active" data-tab="login">Iniciar Sesión</button>
+      <button class="tab" data-tab="register">Crear Cuenta</button>
+      <button class="tab" data-tab="recover">Recuperar Contraseña</button>
+  </div>
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" class="campo">
-        <p class="error" id="errorNombre"></p>
+  <!-- LOGIN -->
+  <div class="tab-content active" id="tab-login">
+      <h2 class="modal-title">Bienvenido de nuevo</h2>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" class="campo">
-        <p class="error" id="errorEmail"></p>
+      <label>Email</label>
+      <input type="email" id="loginEmail" class="campo">
+      <p class="error" id="loginEmailError"></p>
 
-        <label for="edad">Edad:</label>
-        <input type="number" id="edad" class="campo">
-        <p class="error" id="errorEdad"></p>
+      <label>Contraseña</label>
+      <input type="password" id="loginPassword" class="campo">
+      <p class="error" id="loginPassError"></p>
 
-        <div class="botones">
-          <button id="btnGuardar">Guardar</button>
-          <button id="btnVerDatos">Ver Datos</button>
-          <button id="btnLimpiar">Limpiar Formulario</button>
-          <button id="btnBorrarDatos">Borrar Datos</button>
-        </div>
+      <button class="btn-auth" id="btnLogin">Ingresar</button>
+  </div>
 
-        <div id="resultado" class="resultado"></div>
-      </div>
-    </section>
+  <!-- REGISTRO -->
+  <div class="tab-content" id="tab-register">
+      <h2 class="modal-title">Crear una cuenta</h2>
+
+      <label>Nombre completo</label>
+      <input type="text" id="regNombre" class="campo">
+      <p class="error" id="regNombreError"></p>
+
+      <label>Email</label>
+      <input type="email" id="regEmail" class="campo">
+      <p class="error" id="regEmailError"></p>
+
+      <label>Contraseña</label>
+      <input type="password" id="regPassword" class="campo">
+      <p class="error" id="regPassError"></p>
+
+      <label>Edad</label>
+      <input type="number" id="regEdad" class="campo">
+      <p class="error" id="regEdadError"></p>
+
+      <button class="btn-auth" id="btnRegister">Crear Cuenta</button>
+  </div>
+
+  <!-- RECUPERAR CONTRASEÑA -->
+  <div class="tab-content" id="tab-recover">
+      <h2 class="modal-title">Recuperar Contraseña</h2>
+
+      <label>Ingresa tu Email</label>
+      <input type="email" id="recEmail" class="campo">
+      <p class="error" id="recEmailError"></p>
+
+      <button class="btn-auth" id="btnRecover">Enviar enlace</button>
+
+      <p class="recover-info">* Te enviaremos un enlace simulado para restablecer tu contraseña.</p>
+  </div>
+
+</section>
+
+<div class="overlay hidden"></div>
 
     <div class="overlay hidden"></div>
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta - MOTO DETAIL PRO</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+  if (localStorage.getItem('usuarioAutenticado') !== 'true') {
+    window.location.href = 'index.html'; // O donde quieras redirigir
+  }
+</script>
+
+</head>
+<body>
+
+<header id="top">
+    <h1>MI CUENTA</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <button id="btnLogout">Cerrar sesión</button>
+
+    </nav>
+</header>
+
+<main>
+    <section class="card">
+        <h1>¡Bienvenido!</h1>
+        <p id="userNombre">Cargando usuario...</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; MOTO DETAIL PRO.</p>
+</footer>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
